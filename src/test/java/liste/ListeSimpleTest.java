@@ -90,7 +90,16 @@ class ListeSimpleTest {
     }
 
     @Test
-    void supprimePremierListeVide() {
+    void supprimePremier_elementAbsent_neRienModifie() {
+        listeATester.ajout(1);
+        listeATester.ajout(2);
+        listeATester.ajout(3);
+        listeATester.supprimePremier(4);
+        assertEquals("ListeSimple(Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
+    }
+
+    @Test
+    void supprimePremier_listeVide() {
         listeATester.supprimePremier(1);
         assertNull(listeATester.tete);
         assertEquals(0, listeATester.getSize());
