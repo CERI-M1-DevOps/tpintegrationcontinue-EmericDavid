@@ -25,7 +25,7 @@ jobs:
         distribution: 'corretto'
         
     - name: Generate Javadoc
-      run: mvn -B javadoc:javadoc
+      run: mvn -B javadoc::javadoc
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
