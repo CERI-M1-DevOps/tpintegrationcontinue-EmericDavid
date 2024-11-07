@@ -5,6 +5,9 @@ on:
     types:
       - closed
 
+permissions:
+  content: write
+
 jobs:
 
   build-and-deploy:
